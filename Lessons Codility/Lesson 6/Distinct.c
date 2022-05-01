@@ -54,6 +54,13 @@ void quickSort(int array[], int low, int high) {
 
 int solution(int A[], int N) {
     // write your code in C99 (gcc 6.2.0)
+    if(N==0){
+        return 0;
+    }
+    if(N==1){
+        return 1;
+    }
+
     quickSort(A, 0, N- 1);
     int result=0;
     for(int i=0;i<N-1;i++){
@@ -61,5 +68,6 @@ int solution(int A[], int N) {
             result+=1;
         }
     }
+
     return result+1;
 }
